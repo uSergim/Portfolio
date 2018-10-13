@@ -9,3 +9,7 @@ An independent project I am developing. µLyrics allows users to search any song
 Address: www.ulyrics.net
 IMPORTANT: It is still under development, the website contains only a PROTOTYPE version of the app.
 
+LinkedList:
+A simple linked list implementation using nodeJS and Vue.js
+
+
