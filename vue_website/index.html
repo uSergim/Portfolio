@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Adding bootstrap and other CSS files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+  <!--                                      -->
+</head>
+
+<!-- Basic interface begins -->
+<body class="bg-gradient-colorful-light">
+  
+  <nav class="navbar navbar-expand-lg bg-gradient-rainbow">
+    <a class="navbar-brand">DoubleDoor LinkedList Test</a>
+  </nav>
+
+  <div class="m-5" id="app">
+      <div class="general-container" id="user-container">
+        <div class="input-container">
+          <button class="m-2 btn btn-lg btn-success" @click="callAPI({route: 'get', index: getIndex})">Get</button>
+          <input class="float-left w-100" type="text" placeholder="Type the index" v-model.value="getIndex">
+        </div>
+        <div class="input-container">
+          <button class="m-2 btn btn-lg btn-primary" @click="callAPI({route: 'add', data: addData})">Add</button>
+          <input class="float-left w-100" type="text" placeholder="Type the data" v-model.value="addData">
+        </div>
+        <div class="input-container">
+          <button class="m-2 btn btn-lg btn-info" @click="callAPI({route: 'insertAt', index: insertAtIndex, data: insertAtData})">InsertAt</button>
+          <input class="float-left w-100" type="text" placeholder="Type the index" v-model.value="insertAtIndex">
+          <input class="float-left w-100" type="text" placeholder="Type the data" v-model.value="insertAtData">
+        </div>
+        <div class="input-container">
+          <button class="m-2 btn btn-lg btn-warning" @click="callAPI({route: 'remove'})">Remove Head</button>
+        </div>
+        <div class="input-container">
+          <button class="m-2 btn btn-lg btn-danger" @click="callAPI({route: 'removeAt', index: removeAtIndex})">RemoveAt</button>
+          <input class="float-left w-100" type="text" placeholder="Type the index" v-model.value="removeAtIndex">
+        </div>
+      </div>
+    
+      <div class="m-5 general-container border-rainbow" id="results-container">
+        <label class="font-weight-bold">Output Message:</label><br>
+        <label>{{results.message}}</label>
+        <br><br>
+        <label class="font-weight-bold">Details:</label><br>
+        <label>{{results.content}}</label>
+      </div>
+      
+    </div>
+</body>
+<!-- Basic interface ends -->
+
+<!-- Adding scripts -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="script/app.js"></script>
+<!--                -->
+</html>
